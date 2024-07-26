@@ -41,26 +41,33 @@ The dataset originates from NASA's observations of Nearest Earth Objects spannin
 # Data Understanding and EDA:
 Here are the interpretations for the visualizations:
 
-1. Age Distribution
-Interpretation: The age distribution histogram shows how the ages of patients are distributed within the dataset. The kde (kernel density estimate) line provides a smoothed version of the histogram. Peaks in the histogram and KDE indicate the most common age ranges. If the distribution is skewed, it may suggest a bias towards a particular age group within the dataset.
+##1. Distribution of Absolute Maginitude by Hazardous Status
+Interpretation: This histogram gives valuable details for our exploratory data analysis of astronomical objects. It compares the absolute magnitude distributions of hazardous and non-hazardous objects. The statistics show that non-hazardous objects are much more numerous and have a larger range of brightness levels. Hazardous objects, however uncommon in number, tend to cluster near brighter magnitudes. There is a large overlap in brightness between the two categories, indicating that absolute magnitude alone is insufficient to identify an object's hazard level. This image aids in understanding the relationship between brightness and potential hazard, emphasizing the necessity for more features or more complex models in our research to appropriately identify celestial objects as hazardous or non-hazardous.
 
-2. Gender Distribution
-Interpretation: The gender distribution count plot displays the number of patients of each gender. This helps to understand the gender balance in the dataset. A significant imbalance might suggest that the dataset is not fully representative of the general population.
 
-3. MMSE Score Distribution
-Interpretation: The MMSE (Mini-Mental State Examination) score distribution shows the frequency of various MMSE scores in the dataset. The KDE line provides a smoothed estimate of the distribution. This visualization helps to identify the common range of cognitive scores among patients, which can be useful for understanding the severity distribution of cognitive impairment.
+##2. Distribution of Estimated Diamter(Min) by Hazardous Status
+Interpretation: The data visualization shows the distribution of predicted sizes for celestial objects that are classified as hazardous (orange) or non-hazardous (blue). The data is heavily skewed toward smaller objects, with the vast majority having diameters close to 0 km and frequencies approaching 1.9 million for the smallest size group. Non-hazardous objects appear to be more common overall, particularly in smaller size ranges. While the x-axis spans 35 km, objects larger than 5 km are uncommon, with very low frequencies detectable at this size.
 
-4. Pairplot for Numeric Features
-Interpretation: The pairplot shows pairwise relationships between selected numeric features (Age, BMI, Systolic Blood Pressure, Diastolic Blood Pressure, Total Cholesterol, and MMSE). The diagonal plots show the KDE of each individual feature, while the off-diagonal plots show scatter plots of feature pairs, providing insight into potential correlations or patterns between features.
 
-5. Correlation Matrix
-Interpretation: The correlation matrix heatmap visualizes the Pearson correlation coefficients between numeric features. Values close to 1 or -1 indicate strong positive or negative correlations, respectively. This helps to identify which features are related to each other, providing insights into potential multicollinearity or redundant features.
+##3. Distribution of Estimated Diamter(Max) by Hardous Status
+Interpretation: This graph depicts the distribution of estimated maximum diameters for celestial objects that are classified as dangerous (orange) or non-hazardous (blue). The data is strongly skewed towards smaller things, with the highest frequency reaching over 2 million for the smallest size category, which primarily includes non-hazardous objects. While the x-axis reaches up to 80 km, objects larger than 20 km are extremely rare, with only very low frequencies discernible. Non-hazardous objects appear to be substantially more abundant overall, with hazardous objects having a little greater proportion in larger size ranges than in the preceding "min diameter" figure.
 
-6. MMSE Scores by Diagnosis Group
-Interpretation: The boxplot shows the distribution of MMSE scores across different diagnosis groups. The boxes represent the interquartile range (IQR), with the line inside the box indicating the median. Whiskers show the range, and any outliers are displayed as individual points. This visualization helps to compare cognitive function (as measured by MMSE) across different diagnostic categories.
 
-7. Scatter Plot for SystolicBP vs. DiastolicBP
-Interpretation: The scatter plot visualizes the relationship between systolic and diastolic blood pressure, with points colored by diagnosis group. This helps to identify any patterns or differences in blood pressure readings across different diagnosis categories. Clusters or trends can indicate how blood pressure varies with different health conditions.
+##4. Box Plot of Relative Velocity by Hazardous Status
+Interpretation: This box plot offers important information about the relationship between relative velocity and hazard classification of astronomical objects. The apparent disparity in distributions of hazardous and non-hazardous objects implies that velocity is an important component in hazard evaluation. The existence of several outliers in both categories, particularly hazardous items, suggests that the dataset contains a wide range of velocities and potential complexity. This visualization aids in the identification of patterns and differences that may be important for future investigation, such as constructing predictive models or identifying the risk factors linked with certain celestial objects.
+
+
+##5. Box Plot of Miss Distance by Hazardous Status
+Interpretation: This box plot sheds light on the relationship between miss distance and hazard classification of celestial objects. It demonstrates similarities in miss distance distributions across hazardous and non-hazardous objects, calling into question long-held notions regarding the function of miss distance in hazard determination. This leads an examination into other elements that influence classification. The graphic depicts the range and variability of miss distances within each category, which can help inform potential threshold considerations in risk assessment. It implies the necessity to investigate relationships with other variables and use complicated danger categorization criteria in celestial object tracking and risk assessment.
+
+
+##6. Count Plot of bitting Body by Hazardous Status
+Interpretation: This count figure depicts the distribution of orbital bodies around Earth, grouped by their hazardous status. It clearly demonstrates that non-hazardous objects outnumber hazardous ones, giving a fast overview of the relative distribution of potentially deadly objects near Earth. For exploratory data research, this graphic provides as a starting point for further investigation into what characteristics contribute to an object being labeled as dangerous. It also raises concerns about the features and behaviors of the minority of items deemed potentially dangerous, necessitating further investigation into their attributes and trajectories.
+
+
+##7. Correlation Heatmap including Hazardous Status
+Interpretation: This correlation heatmap gives useful information about the links between many aspects of celestial objects, including their dangerous status. It shows substantial correlations between certain physical qualities, such as size and magnitude, but lesser links between hazard status and other variables. Interestingly, the hazardous categorization appears to have a very modest link with miss distance, implying that proximity to Earth may not be the most important component in assessing an object's threat level. For exploratory data analysis, this image provides as a platform for further exploration into the complex interplay of parameters that lead to an object's classification as hazardous, perhaps guiding future research into risk assessment models for near-Earth objects.
+
 
 # Data Preparation:
 To prepare the data for modeling, we will undertake the following steps:
