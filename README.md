@@ -49,7 +49,7 @@ Interpretation: This histogram gives valuable details for our exploratory data a
 Interpretation: The data visualization shows the distribution of predicted sizes for celestial objects that are classified as hazardous (orange) or non-hazardous (blue). The data is heavily skewed toward smaller objects, with the vast majority having diameters close to 0 km and frequencies approaching 1.9 million for the smallest size group. Non-hazardous objects appear to be more common overall, particularly in smaller size ranges. While the x-axis spans 35 km, objects larger than 5 km are uncommon, with very low frequencies detectable at this size.
 
 
-## 3. Distribution of Estimated Diamter(Max) by Hardous Status
+## 3. Distribution of Estimated Diamter(Max) by Hazardous Status
 Interpretation: This graph depicts the distribution of estimated maximum diameters for celestial objects that are classified as dangerous (orange) or non-hazardous (blue). The data is strongly skewed towards smaller things, with the highest frequency reaching over 2 million for the smallest size category, which primarily includes non-hazardous objects. While the x-axis reaches up to 80 km, objects larger than 20 km are extremely rare, with only very low frequencies discernible. Non-hazardous objects appear to be substantially more abundant overall, with hazardous objects having a little greater proportion in larger size ranges than in the preceding "min diameter" figure.
 
 
