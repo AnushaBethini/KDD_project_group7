@@ -1,8 +1,9 @@
 # KDD_project_group7
 Project Title :
-Unlocking the Potential of Data-Driven Diagnosis: Predicting Alzheimer's Disease Stages
+NASA | Nearest Earth Objects
 
 Team Members List :
+
 1.Arun Kusuma
 
 2.Anusha Bethini
@@ -10,9 +11,9 @@ Team Members List :
 3.Pavan Kovi
 
 Project Introduction:
-This project aims to analyze a dataset related to Alzheimer's disease, focusing on descriptive and diagnostic analytics to uncover patterns and insights within the data. The dataset, which includes information such as age, gender, BMI, blood pressure, cholesterol levels, MMSE scores, and diagnosis group, was sourced from a publicly available repository (link to be provided). The goal is to understand the relationships between these variables and identify any significant trends or correlations that may aid in further research or clinical practice.
+The dataset at hand focuses on Nearest Earth Objects (NEOs), which are celestial bodies that closely approach Earth. NASA has compiled observations of these objects from 1910 to 2024, resulting in a comprehensive dataset of 338,199 records. Some of these NEOs pose significant threats to Earth and are classified by NASA as "is_hazardous." This project aims to predict whether an NEO is hazardous or not using various attributes of the dataset.
 
-Given the nature of the data and the research questions, the project will primarily use unsupervised learning techniques such as clustering to group similar patients and descriptive statistics to summarize and explore the data. Additionally, exploratory data analysis (EDA) will be conducted to visualize the distributions and relationships between variables. Classification models may be considered later to predict diagnosis groups based on the available features
+Our project is primarily predictive, aiming to accurately forecast the "is_hazardous" status of NEOs. We will employ supervised learning techniques, given that we have a target variable ("is_hazardous"). Specifically, we will explore classification algorithms to determine the most effective model for this task.
 
 Research Question:
 The primary research question for this project is: What are the key factors associated with different diagnosis groups in Alzheimer's disease, and how do these factors interrelate?
