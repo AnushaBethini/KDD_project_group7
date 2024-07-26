@@ -1,15 +1,13 @@
 # KDD_project_group7
-#Project Title :
+Project Title :
 Unlocking the Potential of Data-Driven Diagnosis: Predicting Alzheimer's Disease Stages
 
 Team Members List :
-1.Sai Shanker Jaina
+1.Arun Kusuma
 
-2.Navya Vejalla
+2.Anusha Bethini
 
-3.Sushma Kolli
-
-4.Sri Gowthami Sunkavalli
+3.Pavan Kovi
 
 Project Introduction:
 This project aims to analyze a dataset related to Alzheimer's disease, focusing on descriptive and diagnostic analytics to uncover patterns and insights within the data. The dataset, which includes information such as age, gender, BMI, blood pressure, cholesterol levels, MMSE scores, and diagnosis group, was sourced from a publicly available repository (link to be provided). The goal is to understand the relationships between these variables and identify any significant trends or correlations that may aid in further research or clinical practice.
