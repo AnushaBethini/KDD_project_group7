@@ -41,7 +41,7 @@ The dataset originates from NASA's observations of Nearest Earth Objects spannin
 # Data Understanding and EDA:
 Here are the interpretations for the visualizations:
 
-## 1. Distribution of Absolute Maginitude by Hazardous Status
+### 1. Distribution of Absolute Maginitude by Hazardous Status
 Interpretation: This histogram gives valuable details for our exploratory data analysis of astronomical objects. It compares the absolute magnitude distributions of hazardous and non-hazardous objects. The statistics show that non-hazardous objects are much more numerous and have a larger range of brightness levels. Hazardous objects, however uncommon in number, tend to cluster near brighter magnitudes. There is a large overlap in brightness between the two categories, indicating that absolute magnitude alone is insufficient to identify an object's hazard level. This image aids in understanding the relationship between brightness and potential hazard, emphasizing the necessity for more features or more complex models in our research to appropriately identify celestial objects as hazardous or non-hazardous.
 
 
