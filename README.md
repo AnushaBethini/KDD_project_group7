@@ -1,4 +1,3 @@
-# KDD_project_group7
 Project Title :
 NASA | Nearest Earth Objects
 
