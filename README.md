@@ -7,7 +7,7 @@ NASA | Nearest Earth Objects
 
 2.Anusha Bethini
 
-3.Pavan Kovi
+3.Pavan Kumar Kovi
 
 # Project Introduction:
 The dataset at hand focuses on Nearest Earth Objects (NEOs), which are celestial bodies that closely approach Earth. NASA has compiled observations of these objects from 1910 to 2024, resulting in a comprehensive dataset of 338,199 records. Some of these NEOs pose significant threats to Earth and are classified by NASA as "is_hazardous." This project aims to predict whether an NEO is hazardous or not using various attributes of the dataset.
