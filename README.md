@@ -1,4 +1,4 @@
-Project Title :
+# Project Title :
 NASA | Nearest Earth Objects
 
 Team Members List :
@@ -9,33 +9,34 @@ Team Members List :
 
 3.Pavan Kovi
 
-Project Introduction:
+# Project Introduction:
 The dataset at hand focuses on Nearest Earth Objects (NEOs), which are celestial bodies that closely approach Earth. NASA has compiled observations of these objects from 1910 to 2024, resulting in a comprehensive dataset of 338,199 records. Some of these NEOs pose significant threats to Earth and are classified by NASA as "is_hazardous." This project aims to predict whether an NEO is hazardous or not using various attributes of the dataset.
 
 Our project is primarily predictive, aiming to accurately forecast the "is_hazardous" status of NEOs. We will employ supervised learning techniques, given that we have a target variable ("is_hazardous"). Specifically, we will explore classification algorithms to determine the most effective model for this task.
 
-Research Question:
-The primary research question for this project is: What are the key factors associated with different diagnosis groups in Alzheimer's disease, and how do these factors interrelate?
+# Research Question:
 
-Relevant Domain Information :
-Alzheimer's Disease Overview: An article providing a comprehensive overview of Alzheimer's disease, including its symptoms, risk factors, and current research trends. Alzheimer's Association
+How accurately can we predict whether a Nearest Earth Object (NEO) is hazardous based on its characteristics such as absolute magnitude, estimated diameter, relative velocity, and miss distance?
 
-MMSE and Its Use in Alzheimer's Diagnosis: An article detailing the Mini-Mental State Examination (MMSE) and its relevance in diagnosing cognitive impairments, particularly Alzheimer's disease. Journal of Alzheimer's Disease
+# Relevant Domain Information :
+Nearest Earth Objects (NEOs) are asteroids and comets with orbits that bring them close to Earth's orbit. Understanding NEOs is crucial for assessing potential collision threats and planning space missions. This field combines astronomy, planetary science, and data analytics to study the dynamics of these celestial bodies.
 
-Data Source and Description:
-Kaggle - Alzheimer's Disease Dataset : https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset
+# Data Source and Description:
+Kaggle NASA | Nearest Earth Objects: https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset https://www.kaggle.com/datasets/ivansher/nasa-nearest-earth-objects-1910-2024Links to an external site.
 
-This dataset includes various attributes related to patients with Alzheimer's disease:
+The dataset originates from NASA's observations of Nearest Earth Objects spanning from 1910 to 2024. It includes the following attributes:
 
-Age: Age of the patient.
-Gender: Gender of the patient.
-BMI: Body Mass Index.
-SystolicBP: Systolic Blood Pressure.
-DiastolicBP: Diastolic Blood Pressure.
-CholesterolTotal: Total Cholesterol levels.
-MMSE: Mini-Mental State Examination score.
-Diagnosis: Diagnosis group (e.g., healthy, mild cognitive impairment, Alzheimer's disease).
-Data Understanding and EDA:
+neo_id: Unique Identifier for each Asteroid
+name: Name given by NASA
+absolute_magnitude: Describes intrinsic luminosity
+estimated_diameter_min: Minimum Estimated Diameter in Kilometres
+estimated_diameter_max: Maximum Estimated Diameter in Kilometres
+orbiting_body: Planet that the asteroid orbits
+relative_velocity: Velocity Relative to Earth in Kmph
+miss_distance: Distance in Kilometres missed
+is_hazardous: Boolean feature that indicates whether the asteroid is harmful or not
+The goal is to use these features to predict the "is_hazardous" attribute
+# Data Understanding and EDA:
 Here are the interpretations for the visualizations:
 
 1. Age Distribution
@@ -59,35 +60,13 @@ Interpretation: The boxplot shows the distribution of MMSE scores across differe
 7. Scatter Plot for SystolicBP vs. DiastolicBP
 Interpretation: The scatter plot visualizes the relationship between systolic and diastolic blood pressure, with points colored by diagnosis group. This helps to identify any patterns or differences in blood pressure readings across different diagnosis categories. Clusters or trends can indicate how blood pressure varies with different health conditions.
 
-Data Preparation:
-To prepare the Alzheimer’s disease dataset for analysis and modeling, the following steps were taken:
+# Data Preparation:
+To prepare the data for modeling, we will undertake the following steps:
 
-1.Loading the Dataset:The dataset was loaded from a CSV file.
-
-2.Exploratory Data Analysis (EDA):
-
-•Displayed the first few rows, basic information, and basic statistics.
-
-•Checked for missing values and examined the distribution of key features like Age, Gender, and MMSE scores.
-
-3.Handling Missing Values:
-
-•If any missing values were found, strategies such as imputation or removal were employed based on the context.
-
-4.Data Cleaning:
-
-•Ensured that the data types of columns were appropriate.
-
-•Converted categorical variables to numeric codes if necessary using pd.get_dummies() or LabelEncoder.
-
-5.Feature Selection:
-
-•Selected relevant numeric features for pairplot analysis to reduce computational load.
-
-•Used data.select_dtypes(include=['float64', 'int64']) to filter numeric columns for the correlation matrix.
-
-6.Sampling:
-
-•For the pairplot, sampled 10% of the data to make the computation more manageable.
+Data Cleaning: Handle missing values, outliers, and inconsistencies.
+Feature Engineering: Create new features or modify existing ones to improve model performance. For example, averaging "estimated_diameter_min" and "estimated_diameter_max" to get a more robust measure of the diameter.
+Encoding Categorical Variables: Convert categorical features like "orbiting_body" into numerical values using techniques such as one-hot encoding.
+Normalization/Standardization: Scale numerical features to ensure that they contribute equally to the model.
+Train-Test Split: Divide the data into training and testing sets to evaluate model performance effectively.
 
 Further steps in data preparation and modeling will be detailed in Deliverable 2.
