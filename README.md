@@ -66,14 +66,15 @@ Interpretation: The scatter plot visualizes the relationship between systolic an
 To prepare the data for modeling, we will undertake the following steps:
 
 1. Data Cleaning:
-   .  Handle missing values, outliers, and inconsistencies.
+.  Handle missing values, outliers, and inconsistencies.
 2. Feature Engineering:
-   . Create new features or modify existing ones to improve model performance.
-   . For example, averaging "estimated_diameter_min" and "estimated_diameter_max" to get a more robust measure of the diameter.
+. Create new features or modify existing ones to improve model performance.
+.  For example, averaging "estimated_diameter_min" and "estimated_diameter_max" to get a more robust measure of the diameter.
 3. Encoding Categorical Variables:
-   .  Convert categorical features like "orbiting_body" into numerical values using techniques such as one-hot encoding.
+. Convert categorical features like "orbiting_body" into numerical values using techniques such as one-hot encoding.
 4. Normalization/Standardization:
-   .Scale numerical features to ensure that they contribute equally to the model.
-5. Train-Test Split: Divide the data into training and testing sets to evaluate model performance effectively.
+. Scale numerical features to ensure that they contribute equally to the model.
+5. Train-Test Split:
+.  Divide the data into training and testing sets to evaluate model performance effectively.
 
 Further steps in data preparation and modeling will be detailed in Deliverable 2.
