@@ -28,16 +28,16 @@ Kaggle NASA | Nearest Earth Objects: https://www.kaggle.com/datasets/rabieelkhar
 
 The dataset originates from NASA's observations of Nearest Earth Objects spanning from 1910 to 2024. It includes the following attributes:
 
-neo_id: Unique Identifier for each Asteroid
-name: Name given by NASA
-absolute_magnitude: Describes intrinsic luminosity
-estimated_diameter_min: Minimum Estimated Diameter in Kilometres
-estimated_diameter_max: Maximum Estimated Diameter in Kilometres
-orbiting_body: Planet that the asteroid orbits
-relative_velocity: Velocity Relative to Earth in Kmph
-miss_distance: Distance in Kilometres missed
-is_hazardous: Boolean feature that indicates whether the asteroid is harmful or not
-The goal is to use these features to predict the "is_hazardous" attribute
+1. neo_id: Unique Identifier for each Asteroid
+2. name: Name given by NASA
+3. absolute_magnitude: Describes intrinsic luminosity
+4. estimated_diameter_min: Minimum Estimated Diameter in Kilometres
+5. estimated_diameter_max: Maximum Estimated Diameter in Kilometres
+6. orbiting_body: Planet that the asteroid orbits
+7. relative_velocity: Velocity Relative to Earth in Kmph
+8. miss_distance: Distance in Kilometres missed
+9. is_hazardous: Boolean feature that indicates whether the asteroid is harmful or not
+  The goal is to use these features to predict the "is_hazardous" attribute
 # Data Understanding and EDA:
 Here are the interpretations for the visualizations:
 
