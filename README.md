@@ -18,10 +18,15 @@ Our project is primarily predictive, aiming to accurately forecast the "is_hazar
 
 How accurately can we predict whether a Nearest Earth Object (NEO) is hazardous based on its characteristics such as absolute magnitude, estimated diameter, relative velocity, and miss distance?
 
+We aim to develop a predictive model that leverages the physical and orbital attributes of NEOs to classify them as hazardous or non-hazardous. The focus will be on identifying the key features that contribute to the prediction and evaluating the model's performance in accurately classifying the NEOs.
+
 # Relevant Domain Information :
 Nearest Earth Objects (NEOs) are asteroids and comets with orbits that bring them close to Earth's orbit .
 Understanding NEOs is crucial for assessing potential collision threats and planning space missions .
 This field combines astronomy, planetary science, and data analytics to study the dynamics of these celestial bodies.
+
+[_NASA - Near Earth Object Program_](https://www.nasa.gov/mission_pages/asteroids/main/index.html) - This NASA webpage provides information about NEOs, including their monitoring, detection, and the risks they pose to Earth.
+
 
 # Data Source and Description:
 Kaggle NASA | Nearest Earth Objects: https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset https://www.kaggle.com/datasets/ivansher/nasa-nearest-earth-objects-1910-2024 Links to an external site.
