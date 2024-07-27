@@ -29,7 +29,7 @@ This field combines astronomy, planetary science, and data analytics to study th
 
 
 # Data Source and Description:
-Kaggle NASA | Nearest Earth Objects: https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset https://www.kaggle.com/datasets/ivansher/nasa-nearest-earth-objects-1910-2024 Links to an external site.
+[_Kaggle NASA | Nearest Earth Objects_](https://www.kaggle.com/datasets/ivansher/nasa-nearest-earth-objects-1910-2024)
 
 The dataset originates from NASA's observations of Nearest Earth Objects spanning from 1910 to 2024. It includes the following attributes:
 
