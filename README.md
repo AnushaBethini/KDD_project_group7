@@ -27,6 +27,8 @@ This field combines astronomy, planetary science, and data analytics to study th
 
 [_NASA - Near Earth Object Program_](https://www.nasa.gov/mission_pages/asteroids/main/index.html) - This NASA webpage provides information about NEOs, including their monitoring, detection, and the risks they pose to Earth.
 
+[__NASA Center for Near-Earth Object Studies_](https://cneos.jpl.nasa.gov/) - The Center for Near Earth Objects Studies(CNEOS) maintains a continuous watch for asteroids and comets that could approach Earth, providing data and predictions about NEOs.
+
 
 # Data Source and Description:
 [_Kaggle NASA | Nearest Earth Objects_](https://www.kaggle.com/datasets/ivansher/nasa-nearest-earth-objects-1910-2024)
