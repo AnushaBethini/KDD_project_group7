@@ -90,7 +90,7 @@ One-Hot Encoding. Categorical features such as "orbiting_body" were translated i
 
 **4. Normalization/Standardization:** 
 
-**Scaling of Numerical Features: ** 
+**Scaling of Numerical Features:** 
 Numerical features were scaled so that they contributed equally to the model. Min-Max scaling and standardization (z-score normalization) were used to bring all features to a similar scale.
 
 **5. Train-Test Split:**
