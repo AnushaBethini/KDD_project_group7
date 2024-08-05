@@ -77,7 +77,7 @@ Interpretation: This correlation heatmap gives useful information about the link
 
 # **Data Preparation:**
 
-1. Data Cleaning: - Manage Missing Values Missing data was imputed, maybe with the mean for numerical features.
+**1. Data Cleaning:** - Manage Missing Values Missing data was imputed, maybe with the mean for numerical features.
 
    Outliers and Inconsistencies: Outliers were detected and rectified, potentially through capping or transformation, while data inconsistencies were corrected to assure data quality.
 
@@ -90,9 +90,12 @@ One-Hot Encoding. Categorical features such as "orbiting_body" were translated i
 
 **4. Normalization/Standardization: ** 
 
-**Scaling of Numerical Features:** Numerical features were scaled so that they contributed equally to the model. Min-Max scaling and standardization (z-score normalization) were used to bring all features to a similar scale.
+**Scaling of Numerical Features: ** 
+Numerical features were scaled so that they contributed equally to the model. Min-Max scaling and standardization (z-score normalization) were used to bring all features to a similar scale.
 
-**5. Train-Test Split:** - Data Division The dataset was separated into training and testing sets to effectively assess model performance. This aids in determining how effectively the model generalizes to new, unseen data.
+**5. Train-Test Split: **
+
+Data Division The dataset was separated into training and testing sets to effectively assess model performance. This aids in determining how effectively the model generalizes to new, unseen data.
 
 # **Modeling:**
 
