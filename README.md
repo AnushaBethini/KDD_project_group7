@@ -75,68 +75,57 @@ Interpretation: This count figure depicts the distribution of orbital bodies aro
 Interpretation: This correlation heatmap gives useful information about the links between many aspects of celestial objects, including their dangerous status. It shows substantial correlations between certain physical qualities, such as size and magnitude, but lesser links between hazard status and other variables. Interestingly, the hazardous categorization appears to have a very modest link with miss distance, implying that proximity to Earth may not be the most important component in assessing an object's threat level. For exploratory data analysis, this image provides as a platform for further exploration into the complex interplay of parameters that lead to an object's classification as hazardous, perhaps guiding future research into risk assessment models for near-Earth objects.
 
 
-# **Data Preparation:**
+# Data Preparation
 
-**1. Data Cleaning:** - Manage Missing Values Missing data was imputed, maybe with the mean for numerical features.
+1. **Data Cleaning**: 
 
-   Outliers and Inconsistencies: Outliers were detected and rectified, potentially through capping or transformation, while data inconsistencies were corrected to assure data quality.
+**Missing Values:** The dataset was loaded into a pandas DataFrame, and any rows with missing values were eliminated with 'df.dropna()'. This guarantees that the dataset used for modeling is full and contains no missing information that could impair the model's performance.
 
-**2. Feature Engineering**: - 
-Creating New Features: New features were included to improve model performance. For example, we averaged the "estimated_diameter_min" and "estimated_diameter_max" to get a more reliable assessment of the diameter.
-   Modifying Existing Features: Existing features were modified or combined to provide more insights and increase the model's prediction potential.
+2. **Feature Engineering:** involves creating new features. A new feature, 'estimated_diameter_avg', was produced by averaging the columns 'estimated_diameter_min' and 'estimated_diameter_max'. This new feature provides a more reliable estimation of the asteroid's diameter, which could be an essential predictor of whether an asteroid is hazardous or not.
 
-**3. Encoding Categorical Variables:** 
-One-Hot Encoding. Categorical features such as "orbiting_body" were translated into numerical values via one-hot encoding, which generates binary columns for each category, allowing the model to accurately comprehend categorical data.
+**3. Encoding Categorical Variables: **
+ **Label Encoding**: The target variable 'is_hazardous' was evaluated to determine whether it was categorical (non-numeric). If it was, the 'LabelEncoder' function from scikit-learn was used to transform it to numerical values. This phase is critical for algorithms that need numerical input.
 
-**4. Normalization/Standardization:** 
+4. **Normalization/Standardization**: - **Scaling Features** The numerical features were scaled with 'StandardScaler'. This phase guarantees that all features contribute evenly to the model and enhances the convergence of gradient-based methods. Standardization changes the data to have a mean of zero and a standard deviation of one.
 
-**Scaling of Numerical Features:** 
-Numerical features were scaled so that they contributed equally to the model. Min-Max scaling and standardization (z-score normalization) were used to bring all features to a similar scale.
+5. **Train-Test Split**: 
+ **Data Splitting** The dataset was divided into training and testing sets with an 80/20 split ratio. This allows you to evaluate the model's performance on previously unseen data, which gives you a better idea of its generalization capacity.
 
-**5. Train-Test Split:**
+# Modeling
 
-Data Division The dataset was separated into training and testing sets to effectively assess model performance. This aids in determining how effectively the model generalizes to new, unseen data.
+1) **Method 1: Scikit-learn Models**:
+    **Model selection**: Several scikit-learn models were tried, including:
+    **RandomForestClassifier**: An ensemble method for creating numerous decision trees and combining them to get a more accurate and stable forecast.
+    **LogisticRegression**: A linear model designed for binary classification situations.
+    **GradientBoostingClassifier**: An ensemble approach for building models successively, with each model attempting to repair faults produced by the prior one.
+    **KNeighborsClassifier**: A straightforward, instance-based learning technique that predicts a label based on the majority label of its k-nearest neighbors.
+    **Training and Evaluation**: Each model was trained using scaled training data and tested using scaled test data. The performance criteria employed for evaluation included classification reports, ROC-AUC scores, and confusion matrices.
 
-# **Modeling:**
+2. **Method 2: 
+PyCaret**: 
+**Automated Machine Learning**: PyCaret, an open-source, low-code machine learning library in Python, was used to compare multiple machine learning methods automatically. PyCaret's 'compare_models' function ranks models according to performance criteria, making it simple to choose the best model.
+**Model comparison**: PyCaret's top model was compared to scikit-learn models to find which model performed best.
 
-Two or more modeling approaches were investigated, including the usage of PyCaret. Here are the steps.
+# Evaluation.
 
-**1. Model Selection with PyCaret:**
+1. **Scikit-learn Models**: 
+ **Classification Reports**: Detailed reports on precision, recall, f1-score, and support per class.
+ **ROC-AUC Scores**: The area under the ROC curve was used to assess the model's ability to differentiate across classes. A higher ROC-AUC score suggests improved model performance.
+ **Confusion Matrices**: Matrixes that display the true positive, true negative, false positive, and false negative counts. These aid in understanding the types of faults that the model makes.
 
-   PyCaret's 'compare_models' function was used to analyze and compare several models.
-   - The best model chosen was 'ExtraTreesClassifier', an ensemble method based on random forests that builds numerous decision trees and integrates their results to produce more accurate and stable predictions.
+2. PyCaret: 
+**Model Ranking**: PyCaret's 'compare_models' function ranked models according on their performance. The top-performing model was then assessed and compared to the best scikit-learn model.
 
-**2. Other Models Explored:**
+# Conclusion/Results
+ 
+**Best Model**: The model with the highest ROC-AUC value was deemed the best. This model has the best capacity to appropriately distinguish hazardous and non-hazardous asteroids.
+**Insights**: Key findings include the significance of good feature engineering and data pretreatment. The 'estimated_diameter_avg' feature, as well as feature normalization, considerably improved model performance.
+**PyCaret Utility**: PyCaret proved to be a useful tool for quickly comparing different models and picking the best one, saving time and effort during the modeling process.
 
-   K-Nearest Neighbors (KNN): An instance-based learning technique that determines a sample's class based on the majority of its k-nearest neighbors.
-   Logistic Regression: A linear model for binary classification tasks that predicts the likelihood of a class label depending on input characteristics.
-   Random The forest: An ensemble approach that creates numerous decision trees during training and returns the mode of the classes for classification.
-   
-# **Evaluation:**
+# Known Issues
 
-The evaluation metrics and outcomes for the models are as follows:
+1. **Data Quality**: - The dataset may have outliers or inconsistencies that were not fully handled. Future generations should involve more rigorous data cleansing and exploration to detect and address such issues.
 
-**1. K-Nearest Neighbors (KNN):** Cross-validation. The KNN model performed well, with an accuracy of 89.96% ± 0.0074. However, there was some variability as evidenced by the standard deviation.
+2. **Model bias**: - There may be biases in the predictors or the target variable. Monitoring and mitigating these biases is critical to ensuring fair and impartial predictions.
 
-**2. Logistic Regression:** Cross-validation accuracy: 0.8710 ± 0.0039.
-   Logistic Regression had a somewhat lower accuracy of roughly 87.10%, but it was quite consistent, as evidenced by the decreased standard deviation.
-
-**3. Random Forest's:** Cross-validation accuracy is 0.9888 ± 0.0017.
-   Test Accuracy: 0.9884. The Random Forest model outperformed expectations, obtaining an accuracy of approximately 98.88% in cross-validation and 98.84% on the test set. This high performance indicates that it was the most effective model for the dataset.
-
-# **Conclusion/Results:**
-
-The investigation revealed that Random Forest was the best-performing model, demonstrating significant predictive ability.
-PyCaret's ExtraTreesClassifier performed similarly to the Random Forest findings.
-
-These findings show the efficacy of ensemble approaches for this specific dataset, most likely due to their ability to prevent overfitting and enhance prediction accuracy by merging numerous decision trees.
-
-# **Known Issues:**
-
-Several potential concerns were discovered that may impair the model's performance and interpretation:
-
-**1. Potential Bias:** The dataset's class imbalance may result in biased model performance. For example, if one class is much more common than others, the model may become biased in forecasting the majority class.
-
-**2. Missing Data:** The imputation approach utilized (mean imputation) may not be optimal for all attributes. More complex methods, such as predictive model-based imputation or feature relationship analysis, may produce superior results.
-
-**3. Encoding:** If there are any ordinal relationships, label encoding may not accurately reflect them. For example, if categories have a natural order, one-hot encoding or ordinal encoding may be better suited to maintaining these relationships.
+3. **Reporting**: Detailed and transparent reporting on model performance and comparison metrics is essential. This ensures that the analysis is reproducible and that the results are reliable.
