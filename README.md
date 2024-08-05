@@ -88,12 +88,12 @@ Creating New Features: New features were included to improve model performance. 
 **3. Encoding Categorical Variables:** 
 One-Hot Encoding. Categorical features such as "orbiting_body" were translated into numerical values via one-hot encoding, which generates binary columns for each category, allowing the model to accurately comprehend categorical data.
 
-**4. Normalization/Standardization: ** 
+**4. Normalization/Standardization:** 
 
 **Scaling of Numerical Features: ** 
 Numerical features were scaled so that they contributed equally to the model. Min-Max scaling and standardization (z-score normalization) were used to bring all features to a similar scale.
 
-**5. Train-Test Split: **
+**5. Train-Test Split:**
 
 Data Division The dataset was separated into training and testing sets to effectively assess model performance. This aids in determining how effectively the model generalizes to new, unseen data.
 
@@ -106,7 +106,7 @@ Two or more modeling approaches were investigated, including the usage of PyCare
    PyCaret's 'compare_models' function was used to analyze and compare several models.
    - The best model chosen was 'ExtraTreesClassifier', an ensemble method based on random forests that builds numerous decision trees and integrates their results to produce more accurate and stable predictions.
 
-**2. Other Models Explored: **
+**2. Other Models Explored:**
 
    K-Nearest Neighbors (KNN): An instance-based learning technique that determines a sample's class based on the majority of its k-nearest neighbors.
    Logistic Regression: A linear model for binary classification tasks that predicts the likelihood of a class label depending on input characteristics.
