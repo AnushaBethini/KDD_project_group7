@@ -122,7 +122,8 @@ PyCaret**:
 **Insights**: Key findings include the significance of good feature engineering and data pretreatment. The 'estimated_diameter_avg' feature, as well as feature normalization, considerably improved model performance.
 **PyCaret Utility**: PyCaret proved to be a useful tool for quickly comparing different models and picking the best one, saving time and effort during the modeling process.
 
-**Scikit-learn**: The model with the highest ROC-AUC score was Random Forest, among other models including Decision Tree and Logistic Regression
+**Scikit-learn**: The model with the highest ROC-AUC score was Random Forest, among other models including Decision Tree and Logistic Regression.
+
 **PyCaret**: The model with the highest ROC-AUC score was ExtraTreesClassifier.
 
 # Known Issues
